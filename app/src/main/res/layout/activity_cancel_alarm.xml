@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:background="@drawable/bg2">
+
+    <TextView
+        android:id="@+id/textViewNhan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="Nhãn"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textGio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="09:20"
+        android:textSize="80sp"
+        android:textStyle="bold"
+        android:layout_below="@id/textViewNhan"/>
+
+    <TextView
+        android:id="@+id/textViewND"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="Nội dung"
+        android:textSize="16sp"
+        android:layout_below="@id/textGio"/>
+
+
+    <Button
+        android:id="@+id/buttonhuy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button3"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Tắt báo thức"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Alarm Clock</string>
+    <string name="channel_name">Channel_1</string>
+    <string name="channel_description">This_is_Channel_1</string>
+</resources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/textViewTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/textViewDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:layout_toRightOf="@id/textViewTime"
+            android:layout_alignBottom="@id/textViewTime"
+            android:layout_marginBottom="2dp"
+            android:layout_marginStart="10dp"
+            android:textColor="#7C7C7C"
+            android:layout_marginTop="5dp"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textViewRepeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Repeat"
+            android:layout_below="@id/textViewTime"
+            android:textColor="#7C7C7C"
+            android:layout_marginStart="10dp"
+            android:textSize="18sp" />
+
+        <Switch
+            android:id="@+id/switchOnOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/textViewTime"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:id="@+id/textViewNhande"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:layout_below="@id/switchOnOff"
+            android:layout_alignParentRight="true"
+            android:textStyle="bold"
+            android:textColor="#7C7C7C"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+</LinearLayout>

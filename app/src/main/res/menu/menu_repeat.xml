@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Một lần"
+        android:id="@+id/menuOneTime"/>
+
+    <item android:title="Hàng ngày"
+        android:id="@+id/menuEveryDay"/>
+
+    <item android:title="Hàng tuần"
+        android:id="@+id/menuEveryWeek"/>
+
+    <item android:title="Hàng tháng"
+        android:id="@+id/menuEveryMonth"/>
+
+</menu>

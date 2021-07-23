@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Tắt thông thường"
+        android:id="@+id/menuCasual"/>
+
+    <item android:title="Dùng mật khẩu"
+        android:id="@+id/menuPass"/>
+
+</menu>

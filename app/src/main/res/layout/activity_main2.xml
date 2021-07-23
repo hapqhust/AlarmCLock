@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:backgroundTintMode="src_atop"
+    tools:context=".MainActivity2">
+
+    <TextView
+        android:id="@+id/textviewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="Sửa báo thức"
+        android:textColor="#292828"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:timePickerMode="spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textviewTitle" />
+
+    <TextView
+        android:id="@+id/textDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25/7/2021"
+        android:textColor="#292828"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timePicker" />
+
+    <ImageView
+        android:id="@+id/ImgDate"
+        android:layout_width="25dp"
+        android:layout_height="35dp"
+        android:src="@drawable/calendar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintStart_toEndOf="@+id/textDate"
+        app:layout_constraintTop_toBottomOf="@+id/timePicker" />
+
+    <RelativeLayout
+        android:id="@+id/RLayoutRepeat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@id/RLayoutLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:padding="10dp"
+            android:text="Lặp lại"
+            android:textColor="#00ACC1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textRepeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/textTen1"
+            android:padding="10dp"
+            android:text="Một lần"
+            android:textColor="#00ACC1"
+            android:textSize="13sp" />
+        <TextView
+            android:id="@+id/textTen1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="20dp"
+            android:text=">"
+            android:textColor="#00ACC1"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RLayoutLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@id/RLayoutContent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:padding="10dp"
+            android:text="Nhãn"
+            android:textColor="#00ACC1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/textlabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/textTen2"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:text="Đây là nhãn"
+            android:textColor="#00ACC1"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/textTen2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:textColor="#00ACC1"
+            android:layout_marginEnd="20dp"
+            android:text=">"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RLayoutContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@id/RLayoutTatBaothuc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:padding="10dp"
+            android:text="Nội dung"
+            android:textColor="#00ACC1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/textTen3"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:text="Đây là nội dung"
+            android:textColor="#00ACC1"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/textTen3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="20dp"
+            android:textColor="#00ACC1"
+            android:text=">"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RLayoutTatBaothuc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@id/guideline1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:padding="10dp"
+            android:text="Tắt báo thức"
+            android:textColor="#00ACC1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textTat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/textTen4"
+            android:padding="10dp"
+            android:text="Tắt thông thường"
+            android:textColor="#00ACC1"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/textTen4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="20dp"
+            android:text=">"
+            android:textColor="#00ACC1"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/RLayoutRepeat"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+            <CheckBox
+                android:id="@+id/checkbox2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Mon"
+                android:buttonTint="@color/teal_700"
+                android:textColor="#00ACC1"
+                android:layout_weight="1"/>
+            <CheckBox
+                android:id="@+id/checkbox3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Tue"
+                android:buttonTint="@color/teal_700"
+                android:textColor="#00ACC1"
+                android:layout_weight="1"/>
+            <CheckBox
+                android:id="@+id/checkbox4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Wed"
+                android:buttonTint="@color/teal_700"
+                android:textColor="#00ACC1"
+                android:layout_weight="1"/>
+            <CheckBox
+                android:id="@+id/checkbox5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="#00ACC1"
+                android:text="Thu"
+                android:buttonTint="@color/teal_700"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+            <CheckBox
+                android:id="@+id/checkbox6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Fri"
+                android:buttonTint="@color/teal_700"
+                android:textColor="#00ACC1"
+                android:layout_weight="1"/>
+            <CheckBox
+                android:id="@+id/checkbox7"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Sat"
+                android:buttonTint="@color/teal_700"
+                android:textColor="#00ACC1"
+                android:layout_weight="1"/>
+            <CheckBox
+                android:id="@+id/checkbox8"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Sun"
+                android:buttonTint="@color/teal_700"
+                android:textColor="#00ACC1"
+                android:layout_weight="1"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Thu"
+                android:visibility="invisible"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/button"
+        android:text="Hủy"
+        android:textColor="#00ACC1"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline1" />
+
+    <Button
+        android:id="@+id/buttonConfirm"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/button2"
+        android:text="Xác nhận"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.88" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
