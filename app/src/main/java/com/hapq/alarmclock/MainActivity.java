@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
             for (int i = 1; i <= 4; i++) {
                 Alarm_Infor alarm = new Alarm_Infor();
                 alarm.setTime(i, 0);
-                alarm.setDate("22/07/2021");
+                alarm.setDate("29/07/2021");
                 alarm.setON(false);
                 alarm.setRepeat("Một lần");
                 alarm.setLabel("");
@@ -278,16 +278,17 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
                 calendar.set(Calendar.MINUTE, list_alarm.get(position).getMinute());
                 date2 = calendar.getTime();
                 Date date1 = new Date();
-                //Toast.makeText(this, "DATE: " + date2, Toast.LENGTH_LONG).show();
-                if (date1.compareTo(date2) < 0) {
-                    Bundle bun = new Bundle();
-                    bun.putString("Mode", "on");
-                    bun.putInt("Vitri", position);
-                    bun.putSerializable("DoiTuong", list_alarm.get(position));
-                    intent_chinh.putExtra("extra", bun);
-                    pendingIntent = PendingIntent.getBroadcast(MainActivity.this, position, intent_chinh, PendingIntent.FLAG_UPDATE_CURRENT);
-                    alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
+                if (date1.compareTo(date2) >= 0) {
+                    calendar.add(Calendar.DATE, 1);
                 }
+                Log.e("Main","DATE: " + calendar.getTime());
+                Bundle bun = new Bundle();
+                bun.putString("Mode", "on");
+                bun.putInt("Vitri", position);
+                bun.putSerializable("DoiTuong", list_alarm.get(position));
+                intent_chinh.putExtra("extra", bun);
+                pendingIntent = PendingIntent.getBroadcast(MainActivity.this, position, intent_chinh, PendingIntent.FLAG_UPDATE_CURRENT);
+                alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
                 return;
             }
 
@@ -541,15 +542,17 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
                 date2 = calendar.getTime();
                 Date date1 = new Date();
                 //Toast.makeText(this, "DATE: " + date2, Toast.LENGTH_LONG).show();
-                if (date1.compareTo(date2) < 0) {
-                    Bundle bun = new Bundle();
-                    bun.putString("Mode", "on");
-                    bun.putInt("Vitri", position);
-                    bun.putSerializable("DoiTuong", list_alarm.get(position));
-                    intent_chinh.putExtra("extra", bun);
-                    pendingIntent = PendingIntent.getBroadcast(MainActivity.this, position, intent_chinh, PendingIntent.FLAG_UPDATE_CURRENT);
-                    alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
+                if (date1.compareTo(date2) >= 0) {
+                    calendar.add(Calendar.DATE, 1);
                 }
+                Log.e("Main","DATE: " + calendar.getTime());
+                Bundle bun = new Bundle();
+                bun.putString("Mode", "on");
+                bun.putInt("Vitri", position);
+                bun.putSerializable("DoiTuong", list_alarm.get(position));
+                intent_chinh.putExtra("extra", bun);
+                pendingIntent = PendingIntent.getBroadcast(MainActivity.this, position, intent_chinh, PendingIntent.FLAG_UPDATE_CURRENT);
+                alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
                 return;
 
             }
