@@ -212,6 +212,59 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
         alertDialog.setPositiveButton("Có", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+                String u = list_alarm.get(position).getRepeat();
+                if(u.equals("Hàng ngày") || u.equals("Một lần"))
+                {
+                    pendingIntent = PendingIntent.getBroadcast(MainActivity.this, position, intent_chinh, PendingIntent.FLAG_UPDATE_CURRENT);
+                    alarmManager.cancel(pendingIntent);
+                }
+                else{
+                    if(u.equals("Hàng tháng")){
+                        for(int i = 1; i <= 12; i++) {
+                            pendingIntent = PendingIntent.getBroadcast(MainActivity.this, (position * 100 + i), intent_chinh, PendingIntent.FLAG_UPDATE_CURRENT);
+                            alarmManager.cancel(pendingIntent);
+                        }
+                    }
+                    else{
+                        int[] b = new int[10];
+                        for (int i = 2; i <= 8; i++) {
+                            b[i] = 0;
+                        }
+                        int size = u.length();
+                        for(int i = 3; i <= size; i+=3){
+                            switch(u.substring(i-3, i-1)){
+                                case "Mo":
+                                    b[2] = 1;
+                                    break;
+                                case "Tu":
+                                    b[3] = 1;
+                                    break;
+                                case "We":
+                                    b[4] = 1;
+                                    break;
+                                case "Th":
+                                    b[5] = 1;
+                                    break;
+                                case "Fr":
+                                    b[6] = 1;
+                                    break;
+                                case "Sa":
+                                    b[7] = 1;
+                                    break;
+                                case "Su":
+                                    b[8] = 1;
+                                    break;
+                            }
+                        }
+                        for(int i = 2; i <= 8; i++) {
+                            if(b[i] == 1)
+                            {
+                                pendingIntent = PendingIntent.getBroadcast(MainActivity.this, (position*100 + 50 + i), intent_chinh, PendingIntent.FLAG_UPDATE_CURRENT);
+                                alarmManager.cancel(pendingIntent);
+                            }
+                        }
+                    }
+                }
                 list_alarm.remove(position);
                 database.QueryData("DELETE FROM CongViec WHERE Id = " + (position + 1));
                 for (int i = position + 1; i <= list_alarm.size(); i++)
